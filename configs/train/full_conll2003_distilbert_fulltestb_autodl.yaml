@@ -1,0 +1,16 @@
+name: conll2003_distilbert_fulltestb
+dataset_config: configs/dataset/conll2003_autodl.yaml
+model_config: configs/model/bert_crf_distil.yaml
+train:
+  epochs: 5
+  batch_size: 64
+  num_workers: 8
+  lr: 0.00005
+  weight_decay: 0.01
+  max_len: 128
+  device: cuda
+  seed: 42
+  output_dir: /root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_distilbert_fulltestb
+  lr_scheduler: plateau
+  scheduler_patience: 2
+  scheduler_factor: 0.5

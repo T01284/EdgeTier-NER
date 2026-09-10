@@ -1,0 +1,15 @@
+{
+  "vocab_size": 60,
+  "num_tags": 8,
+  "embed_dim": 64,
+  "num_filters": 128,
+  "kernel_size": 3,
+  "dilations": [
+    1,
+    2,
+    4
+  ],
+  "dropout": 0.1,
+  "use_residual": true,
+  "max_word_len": 20
+}

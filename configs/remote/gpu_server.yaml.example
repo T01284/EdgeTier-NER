@@ -1,0 +1,22 @@
+# Remote GPU server — copy to gpu_server.yaml and fill after SSH is ready
+host: YOUR_GPU_HOST
+user: YOUR_USER
+port: 22
+project_dir: /root/EdgeTier-NER
+# Large data disk (example AutoDL layout); keep secrets out of git
+data_root: /root/autodl-tmp/EdgeTier-NER
+python: python3
+cuda_device: 0
+
+sync:
+  include:
+    - src/
+    - configs/
+    - scripts/
+    - pyproject.toml
+    - requirements/
+  exclude:
+    - paper/build/
+    - outputs/
+    - data/raw/
+    - .venv/

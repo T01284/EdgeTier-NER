@@ -1,0 +1,4 @@
+name: ontonotes
+dataset: ontonotes
+raw_dir: /root/autodl-tmp/EdgeFS_NER/data/raw/ontonotes
+processed_dir: /root/autodl-tmp/EdgeFS_NER/data/processed/ontonotes

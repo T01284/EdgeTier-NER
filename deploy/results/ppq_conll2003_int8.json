@@ -1,0 +1,12 @@
+{
+  "checkpoint": "/root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_full/best.pt",
+  "processed_dir": "/root/autodl-tmp/EdgeFS_NER/data/processed/conll2003",
+  "bits": 8,
+  "num_sentences": 1722,
+  "vocab_size": 60,
+  "metrics": {
+    "precision": 0.7323518308795772,
+    "recall": 0.6668958404950155,
+    "f1": 0.6980928391507737
+  }
+}

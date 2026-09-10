@@ -1,0 +1,11 @@
+name: bilstm_char_crf_glove
+model: bilstm_char_crf
+embed_dim: 100
+char_embed_dim: 64
+char_num_filters: 128
+char_kernel_size: 3
+hidden_dim: 256
+num_layers: 1
+dropout: 0.5
+freeze_embeddings: false
+max_word_len: 20

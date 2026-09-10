@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edgefs-ner"
+version = "0.1.0"
+description = "Label-efficient NER across the edge spectrum"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pyyaml>=6.0",
+  "tqdm>=4.66",
+  "seqeval>=1.2",
+  "pytorch-crf>=0.7.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+data = ["datasets>=2.14", "requests>=2.31"]
+train-cpu = ["torch>=2.1"]
+train-gpu = ["torch>=2.1"]
+export = ["onnx>=1.15", "onnxruntime>=1.16", "onnxscript>=0.1.0"]
+quantize = ["esp-ppq>=1.0.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

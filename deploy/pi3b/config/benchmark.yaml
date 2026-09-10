@@ -1,0 +1,13 @@
+deploy_dir: assets/deploy
+samples: ../shared/sample_inputs.json
+warmup: 3
+repeat: 10
+output: results/pi3b_benchmark.json
+
+# Hardware reference (Table 3 / Section 4.3)
+hardware:
+  board: Raspberry Pi 3 Model B Plus
+  soc: BCM2837B0
+  cpu: Quad-core Cortex-A53 1.4 GHz
+  ram_mb: 1024
+  os: Raspberry Pi OS 64-bit (Debian)

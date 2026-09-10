@@ -1,0 +1,2 @@
+# Base (local prep + CPU smoke tests)
+-r requirements/base.txt

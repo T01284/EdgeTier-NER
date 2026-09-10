@@ -1,0 +1,12 @@
+{
+  "platform": "host_cpu_onnx_simulation",
+  "deploy_dir": "outputs/export/conll2003_full/deploy",
+  "warmup": 3,
+  "repeat": 10,
+  "latency_ms_mean": 2.973,
+  "latency_ms_per_sentence": [3.174, 2.738, 3.008],
+  "peak_rss_mb": 63.83,
+  "model_size_kb": 697.9,
+  "source": "scripts/run_full_deploy_test.py",
+  "timestamp_utc": "2026-07-11T07:15:02Z"
+}

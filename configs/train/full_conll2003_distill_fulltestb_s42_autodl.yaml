@@ -1,0 +1,18 @@
+name: conll2003_distill_fulltestb_s42
+dataset_config: configs/dataset/conll2003_autodl.yaml
+model_config: configs/model/char_cnn_crf_small.yaml
+distill:
+  teacher_checkpoint: /root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_bilstm_fulltestb/best.pt
+  alpha: 0.5
+  temperature: 2.0
+  lambda_transition: 0.1
+train:
+  epochs: 30
+  batch_size: 256
+  num_workers: 8
+  lr: 0.001
+  weight_decay: 0.0001
+  max_len: 128
+  device: cuda
+  seed: 42
+  output_dir: /root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_distill_fulltestb_s42

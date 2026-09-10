@@ -1,0 +1,17 @@
+name: conll2003_distill_s43
+dataset_config: configs/dataset/conll2003_autodl.yaml
+model_config: configs/model/char_cnn_crf_small.yaml
+distill:
+  teacher_checkpoint: /root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_bilstm/best.pt
+  alpha: 0.5
+  temperature: 2.0
+  lambda_transition: 0.1
+train:
+  epochs: 30
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  max_len: 128
+  device: cuda
+  seed: 43
+  output_dir: /root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_distill_s43

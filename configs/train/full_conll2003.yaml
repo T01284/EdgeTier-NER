@@ -1,0 +1,12 @@
+name: full_conll2003
+dataset_config: configs/dataset/conll2003.yaml
+model_config: configs/model/char_cnn_crf_small.yaml
+train:
+  epochs: 30
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  max_len: 128
+  device: cuda
+  seed: 42
+  output_dir: outputs/runs/conll2003_full

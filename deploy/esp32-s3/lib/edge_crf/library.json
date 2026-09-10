@@ -1,0 +1,8 @@
+{
+  "name": "edge_crf",
+  "version": "0.1.0",
+  "description": "Linear-chain CRF Viterbi decoder",
+  "authors": [{ "name": "EdgeFS NER" }],
+  "frameworks": ["espidf"],
+  "platforms": ["espressif32"]
+}

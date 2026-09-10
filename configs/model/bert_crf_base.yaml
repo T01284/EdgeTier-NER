@@ -1,0 +1,4 @@
+name: bert_crf_base
+model: bert_crf
+pretrained_name: bert-base-cased
+dropout: 0.1

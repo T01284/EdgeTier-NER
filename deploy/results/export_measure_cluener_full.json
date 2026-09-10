@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/root/autodl-tmp/EdgeFS_NER/outputs/runs/cluener_full/best.pt",
+  "model_type": "char_cnn_crf",
+  "mcu_exportable": true,
+  "onnx_path": "/root/autodl-tmp/EdgeFS_NER/outputs/export/cluener_full/model_emissions.onnx",
+  "onnx_size_kb": 1607.7,
+  "param_count": 411576,
+  "vocab_size": 3673,
+  "embed_fp32_kb": 918.25,
+  "peak_activation_kb_est": 128.0,
+  "host_cpu_latency_ms": 0.84,
+  "test_f1_from_metrics": null
+}

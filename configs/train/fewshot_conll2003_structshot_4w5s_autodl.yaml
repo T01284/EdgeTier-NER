@@ -1,0 +1,26 @@
+name: conll2003_fewshot_structshot_4w5s
+dataset_config: configs/dataset/conll2003_autodl.yaml
+model_config: configs/model/bert_crf_base.yaml
+fewshot:
+  method: structshot
+  n_way: 4
+  k_shot: 5
+  num_episodes: 5
+  query_size: 200
+train:
+  epochs: 5
+  batch_size: 16
+  lr: 0.00005
+  weight_decay: 0.01
+  max_len: 128
+  device: cuda
+  seed: 42
+  lambda_proto: 0.5
+  lambda_contrastive: 0.0
+  lambda_struct: 0.2
+  support_only: false
+  nn_k: 1
+  lr_scheduler: plateau
+  scheduler_patience: 2
+  scheduler_factor: 0.5
+  output_dir: /root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_fewshot_structshot_4w5s

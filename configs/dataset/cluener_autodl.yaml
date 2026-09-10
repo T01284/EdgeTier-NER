@@ -1,0 +1,4 @@
+name: cluener
+dataset: cluener
+raw_dir: /root/autodl-tmp/EdgeFS_NER/data/raw/cluener
+processed_dir: /root/autodl-tmp/EdgeFS_NER/data/processed/cluener

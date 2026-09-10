@@ -1,0 +1,8 @@
+# Install on remote GPU server (5090). Pick ONE torch line matching CUDA version.
+# CUDA 12.x example — adjust after SSH to remote:
+# pip install torch --index-url https://download.pytorch.org/whl/cu124
+-r base.txt
+onnx>=1.15
+onnxruntime-gpu>=1.16
+transformers>=4.36
+accelerate>=0.25

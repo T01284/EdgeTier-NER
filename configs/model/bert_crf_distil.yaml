@@ -1,0 +1,4 @@
+name: bert_crf_distil
+model: bert_crf
+pretrained_name: distilbert-base-cased
+dropout: 0.1

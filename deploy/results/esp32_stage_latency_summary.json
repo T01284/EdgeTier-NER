@@ -1,0 +1,29 @@
+{
+  "source": "deploy/results/esp32_stage_latency_full.json",
+  "pio_env": "esp32-s3-n16r8-espdl-uart-pure",
+  "artifact_tag": "edgefs-esp32-71afcd50",
+  "espdl_sha256": "71afcd502bff32f47ef3f7ab64d6fe7c4c937b5f8a2d1f4a38b4689e589f2ba2",
+  "num_sentences": 1721,
+  "skipped_sentence_ids": [
+    1535
+  ],
+  "metrics": {
+    "precision": 0.7593582887700535,
+    "recall": 0.6411948593261549,
+    "f1": 0.695291902071563
+  },
+  "latency_ms_mean": 1719.452768739105,
+  "latency_ms_p50": 1298.663,
+  "latency_ms_p95": 3485.218,
+  "stage_ms_mean": {
+    "embed_quant": 1104.28,
+    "espdl_infer": 614.94,
+    "viterbi": 0.2298
+  },
+  "stage_share": {
+    "embed_quant": 0.6422,
+    "espdl_infer": 0.3576,
+    "viterbi": 0.0001
+  },
+  "timestamp_utc": "2026-07-15T06:45:39.340190+00:00"
+}

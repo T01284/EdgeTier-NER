@@ -1,0 +1,24 @@
+name: full_conll2003_bilstm_v3
+dataset_config: configs/dataset/conll2003.yaml
+model_config: configs/model/bilstm_char_crf_glove.yaml
+embeddings:
+  glove_dir: data/embeddings
+  dim: 100
+train:
+  epochs: 100
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  max_len: 128
+  max_word_len: 20
+  device: cuda
+  seed: 42
+  output_dir: outputs/runs/conll2003_bilstm_v3
+  lr_scheduler: plateau
+  scheduler_patience: 5
+  scheduler_factor: 0.5
+  grad_clip_norm: 5.0
+  min_epochs: 20
+  early_stop_patience: 10
+  eval_scheme: IOB1
+  log_test_each_epoch: true

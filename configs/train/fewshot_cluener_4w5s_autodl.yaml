@@ -1,0 +1,19 @@
+name: cluener_fewshot_4w5s
+dataset_config: configs/dataset/cluener_autodl.yaml
+model_config: configs/model/char_cnn_crf_small.yaml
+fewshot:
+  method: ours
+  n_way: 4
+  k_shot: 5
+  num_episodes: 5
+  query_size: 200
+train:
+  epochs: 10
+  batch_size: 16
+  lr: 0.001
+  max_len: 128
+  device: cuda
+  seed: 42
+  lambda_proto: 0.5
+  lambda_contrastive: 0.1
+  output_dir: /root/autodl-tmp/EdgeFS_NER/outputs/runs/cluener_fewshot_4w5s

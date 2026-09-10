@@ -1,0 +1,17 @@
+[
+  {
+    "id": "en-01",
+    "text": "John works in Paris",
+    "note": "CoNLL-style English smoke sentence"
+  },
+  {
+    "id": "en-02",
+    "text": "Mary visited London yesterday",
+    "note": "multi-token entities"
+  },
+  {
+    "id": "en-03",
+    "text": "Google opened an office in Berlin",
+    "note": "ORG + LOC"
+  }
+]

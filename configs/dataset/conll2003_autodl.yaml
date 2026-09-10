@@ -1,0 +1,6 @@
+name: conll2003
+dataset: conll2003
+# 数据盘路径 — 下次训练前使用（勿在运行中切换）
+raw_dir: /root/autodl-tmp/EdgeFS_NER/data/raw/conll2003
+processed_dir: /root/autodl-tmp/EdgeFS_NER/data/processed/conll2003
+lowercase: true

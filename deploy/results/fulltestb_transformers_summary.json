@@ -1,0 +1,23 @@
+{
+  "source": "AutoDL fulltestb transformers",
+  "test_set": "official eng.testb (3453 sentences)",
+  "runs": {
+    "conll2003_bert_fulltestb": {
+      "test_f1_percent": 85.6,
+      "metrics": "outputs/runs/conll2003_bert_fulltestb/metrics.json"
+    },
+    "conll2003_distilbert_fulltestb": {
+      "test_f1_percent": 86.6,
+      "metrics": "outputs/runs/conll2003_distilbert_fulltestb/metrics.json"
+    },
+    "conll2003_tinybert_fulltestb": {
+      "test_f1_percent": 84.4,
+      "metrics": "outputs/runs/conll2003_tinybert_fulltestb/metrics.json"
+    }
+  },
+  "paper_table1_conll": {
+    "BERT-base-CRF": 85.6,
+    "DistilBERT-CRF": 86.6,
+    "TinyBERT": 84.4
+  }
+}

@@ -1,0 +1,4 @@
+name: bert_crf_chinese_distil
+model: bert_crf
+pretrained_name: distilbert-base-multilingual-cased
+dropout: 0.1

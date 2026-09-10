@@ -1,0 +1,13 @@
+{
+  "checkpoint": "/root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_distill/best.pt",
+  "model_type": "char_cnn_crf",
+  "mcu_exportable": true,
+  "onnx_path": "/root/autodl-tmp/EdgeFS_NER/outputs/export/conll2003_distill/model_emissions.onnx",
+  "onnx_size_kb": 697.9,
+  "param_count": 178264,
+  "vocab_size": 60,
+  "embed_fp32_kb": 15.0,
+  "peak_activation_kb_est": 128.0,
+  "host_cpu_latency_ms": 1.18,
+  "test_f1_from_metrics": null
+}

@@ -1,0 +1,9 @@
+{
+  "checkpoint": "/root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_ablation_wordlevel/best.pt",
+  "model_type": "bilstm_crf",
+  "mcu_exportable": false,
+  "reason": "Word-level / transformer checkpoints are outside the Char-CNN ONNX\u2192ESP-DL emission export path (OOM / unsupported ops on MCU).",
+  "param_count": 2338756,
+  "ckpt_size_kb": 9140.1,
+  "test_f1_from_metrics": null
+}

@@ -1,0 +1,44 @@
+{
+  "platform": "raspberry_pi_3b_plus",
+  "host": "rpi@<redacted>",
+  "meter": {
+    "rail": "5V",
+    "point": "USB/inline as reported by operator",
+    "notes": "Hand-read ammeter on 5V; ranges below"
+  },
+  "idle": {
+    "voltage_v": 5.0,
+    "current_a_min": 0.384,
+    "current_a_max": 0.432,
+    "current_a_mid": 0.408,
+    "power_w_mid": 2.04,
+    "power_w_range": [
+      1.92,
+      2.16
+    ]
+  },
+  "active": {
+    "voltage_v": 5.0,
+    "current_a_min": 0.645,
+    "current_a_max": 0.678,
+    "current_a_mid": 0.6615,
+    "power_w_mid": 3.308,
+    "power_w_range": [
+      3.225,
+      3.39
+    ],
+    "load": "continuous ONNX+Viterbi fixed sentence",
+    "n_sentences": 1744,
+    "latency_ms_mean": 51.449,
+    "latency_ms_p50": 51.21
+  },
+  "energy_per_sentence_mJ": {
+    "continuous_load_accounting": 170.2,
+    "continuous_load_note": "P_active_mid * t_mean (51.449 ms, fixed-sentence continuous load, n=1744)",
+    "full_split_accounting": 181,
+    "full_split_note": "P_active_mid * t_e2e (54.7 ms, full test split); used in the manuscript",
+    "delta_power_x_continuous_latency": 65.2,
+    "method": "E = P_active_mid * t; mid currents from reported ranges"
+  },
+  "timestamp_local_note": "2026-07-15 Pi power bench + operator meter reading"
+}

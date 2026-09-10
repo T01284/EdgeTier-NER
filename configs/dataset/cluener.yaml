@@ -1,0 +1,4 @@
+name: cluener
+dataset: cluener
+raw_dir: data/raw/cluener
+processed_dir: data/processed/cluener

@@ -1,0 +1,129 @@
+# LaTeX build artifacts
+paper/build/
+paper/ieee-esl/build/
+paper/$BuildDir/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# Downloaded template archives
+paper/templates/elsarticle.zip
+paper/templates/elsarticle-src/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Python / experiment (bulk ignored; pinned bundles whitelisted below)
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+wandb/
+checkpoints/
+data/raw/
+data/processed/
+data/hf_cache/
+data/embeddings/
+data/preproc_diff/
+
+# LDC / Reuters-attached corpora — do not redistribute processed splits
+data/processed_remote/ontonotes/
+data/processed_remote/conll2003/
+
+# Scratch operator scripts (local GPU/ops only; never publish)
+scripts/_*.py
+scripts/_*.sh
+scripts/_*.log
+
+# Training runs — pin the CoNLL deploy checkpoint used for Table 5 (fulltestb s42)
+outputs/runs/*
+!outputs/runs/conll2003_full_fulltestb_s42/
+outputs/runs/conll2003_full_fulltestb_s42/*
+!outputs/runs/conll2003_full_fulltestb_s42/best.pt
+!outputs/runs/conll2003_full_fulltestb_s42/metrics.json
+!outputs/runs/conll2003_full_fulltestb_s42/char_vocab.json
+
+# Export bundles — pin the same s42 deploy path as Pi assets
+outputs/export/*
+!outputs/export/conll2003_full_fulltestb_s42/
+!outputs/export/conll2003_full_fulltestb_s42/**
+outputs/export_test/
+outputs/logs/
+
+# Model binaries — global ignore with deploy/export exceptions
+*.pt
+!outputs/runs/conll2003_full_fulltestb_s42/best.pt
+*.pth
+*.onnx
+!deploy/esp32-s3/models/*.onnx
+!deploy/pi3b/assets/deploy/*.onnx
+!outputs/export/conll2003_full_fulltestb_s42/deploy/*.onnx
+*.espdl
+!deploy/esp32-s3/models/*.espdl
+
+# Probe / intermediate MCU exports (not the paper identity-skip SKU)
+deploy/esp32-s3/models/_probe*
+deploy/esp32-s3/models/edgefs_model_densify*
+deploy/esp32-s3/models/edgefs_model_idskip*
+deploy/esp32-s3/models/edgefs_model_nores*
+deploy/esp32-s3/models/edgefs_model_fulltestb*
+deploy/esp32-s3/models/model_emissions_fixed.onnx
+
+# Paper-cited deploy results only (whitelist)
+deploy/results/**
+!deploy/results/
+!deploy/results/README.md
+!deploy/results/pi3b_full_test.json
+!deploy/results/host_deploy_eval_fulltestb_s42.json
+!deploy/results/esp32_full_eval_int8_idskip.json
+!deploy/results/esp32_full_eval_fw_hybrid.json
+!deploy/results/espdl_test.json
+!deploy/results/esp32_stage_latency_summary.json
+!deploy/results/pi3b_power_summary.json
+!deploy/results/esp32_power_summary.json
+!deploy/results/fulltestb_multiseed_summary.json
+!deploy/results/fulltestb_transformers_summary.json
+!deploy/results/ablation_multiseed_summary.json
+!deploy/results/export_measure_conll2003_full.json
+!deploy/results/export_measure_conll2003_distill.json
+!deploy/results/export_measure_conll2003_ablation_wordlevel.json
+!deploy/results/export_measure_cluener_full.json
+!deploy/results/export_measure_cluener_byte_full.json
+!deploy/results/ppq_conll2003_int8.json
+!deploy/results/pi3b_conll2003_distill_s42_latency.json
+!deploy/results/pi3b_conll2003_distill_s42_benchmark.json
+
+# PlatformIO / edge deploy build cache (sources + pinned artifacts stay tracked)
+deploy/esp32-s3/.pio/
+deploy/esp32-s3/managed_components/
+deploy/esp32-s3/sdkconfig
+deploy/esp32-s3/sdkconfig.old
+deploy/pi3b/.venv/
+
+# Secrets (use configs/remote/gpu_server.yaml.example as template)
+.env
+configs/remote/gpu_server.yaml
+*.key
+credentials.json
+
+# IDE
+.cursor/
+

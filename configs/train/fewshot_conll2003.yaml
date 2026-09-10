@@ -1,0 +1,18 @@
+name: fewshot_conll2003
+dataset_config: configs/dataset/conll2003.yaml
+model_config: configs/model/char_cnn_crf_small.yaml
+fewshot:
+  n_way: 4  # CoNLL-2003 has PER/ORG/LOC/MISC only
+  k_shot: 1
+  num_episodes: 5
+  query_size: 200
+train:
+  epochs: 10
+  batch_size: 16
+  lr: 0.001
+  max_len: 128
+  device: cuda
+  seed: 42
+  lambda_proto: 0.5
+  lambda_contrastive: 0.1
+  output_dir: outputs/runs/conll2003_fewshot_5w1s

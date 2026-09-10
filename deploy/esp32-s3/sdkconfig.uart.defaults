@@ -1,0 +1,6 @@
+# UART eval defaults.
+# - USB_JTAG env: host protocol on USB Serial/JTAG.
+# - GPIO env (uart-pure-gpio): host protocol on UART1 GPIO17/18; USB for power/flash.
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=32768
+CONFIG_MAIN_TASK_STACK_SIZE=32768

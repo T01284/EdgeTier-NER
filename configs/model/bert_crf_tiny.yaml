@@ -1,0 +1,4 @@
+name: bert_crf_tiny
+model: bert_crf
+pretrained_name: huawei-noah/TinyBERT_General_4L_312D
+dropout: 0.1

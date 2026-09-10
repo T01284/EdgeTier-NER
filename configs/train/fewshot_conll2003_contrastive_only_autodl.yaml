@@ -1,0 +1,18 @@
+name: conll2003_fewshot_contrastive_only
+dataset_config: configs/dataset/conll2003_autodl.yaml
+model_config: configs/model/char_cnn_crf_small.yaml
+fewshot:
+  n_way: 4
+  k_shot: 1
+  num_episodes: 5
+  query_size: 200
+train:
+  epochs: 10
+  batch_size: 16
+  lr: 0.001
+  max_len: 128
+  device: cuda
+  seed: 42
+  lambda_proto: 0.0
+  lambda_contrastive: 1.0
+  output_dir: /root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_fewshot_contrastive_only

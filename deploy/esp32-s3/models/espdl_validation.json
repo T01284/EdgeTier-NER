@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "espdl_kb": 342.5,
+  "post_embed_max_abs_diff": 0.0,
+  "post_embed_ok": true,
+  "onnx_max_abs_diff": 2.86102294921875e-06,
+  "onnx_ok": true,
+  "output_shape": [
+    1,
+    128,
+    8
+  ],
+  "sample_emission_mean": -0.8660280108451843
+}

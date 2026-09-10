@@ -1,0 +1,19 @@
+name: cluener_bilstm
+dataset_config: configs/dataset/cluener_autodl.yaml
+model_config: configs/model/bilstm_crf_glove.yaml
+embeddings:
+  glove_dir: /root/autodl-tmp/EdgeFS_NER/data/embeddings
+  dim: 100
+train:
+  epochs: 50
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  max_len: 128
+  max_word_len: 20
+  device: cuda
+  seed: 42
+  output_dir: /root/autodl-tmp/EdgeFS_NER/outputs/runs/cluener_bilstm
+  lr_scheduler: plateau
+  scheduler_patience: 3
+  scheduler_factor: 0.5

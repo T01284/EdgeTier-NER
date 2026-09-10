@@ -1,0 +1,7 @@
+name: bilstm_crf_glove
+model: bilstm_crf
+embed_dim: 100
+hidden_dim: 256
+num_layers: 1
+dropout: 0.5
+freeze_embeddings: false

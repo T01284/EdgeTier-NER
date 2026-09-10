@@ -1,0 +1,40 @@
+{
+  "platform": "esp32_s3_int8_uart_gpio",
+  "port": "COM23",
+  "pio_env": "esp32-s3-n16r8-espdl-uart-pure-gpio",
+  "uart": {"tx_gpio": 17, "rx_gpio": 18, "baud": 115200},
+  "meter": {
+    "rail": "5V",
+    "point": "USB supply (power-only); protocol on TTL COM23",
+    "notes": "Hand-read ammeter; active reported as idle + delta"
+  },
+  "idle": {
+    "voltage_v": 5.0,
+    "current_a_min": 0.063,
+    "current_a_max": 0.067,
+    "current_a_mid": 0.065,
+    "power_w_mid": 0.325,
+    "power_w_range": [0.315, 0.335]
+  },
+  "active": {
+    "voltage_v": 5.0,
+    "delta_current_a_min": 0.02,
+    "delta_current_a_max": 0.03,
+    "delta_current_a_mid": 0.025,
+    "current_a_mid": 0.09,
+    "power_w_mid": 0.45,
+    "power_w_range_approx": [0.415, 0.485],
+    "load": "continuous EVAL fixed sentence over GPIO UART",
+    "n_sentences": 69,
+    "latency_ms_mean": 1299.8
+  },
+  "energy_per_sentence_mJ": {
+    "continuous_load_accounting": 584.9,
+    "continuous_load_note": "P_active_mid * t_mean (1299.8 ms, fixed-sentence continuous load, n=69)",
+    "full_split_accounting": 774,
+    "full_split_note": "P_active_mid * t_e2e (1719 ms, full UART split); used in the manuscript",
+    "delta_power_x_continuous_latency": 162.5,
+    "method": "P_active = 5V * (idle_mid + delta_mid)"
+  },
+  "timestamp_local_note": "2026-07-15 ESP32 GPIO-UART power bench + operator meter"
+}

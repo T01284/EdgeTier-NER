@@ -1,0 +1,5 @@
+name: cluener_byte
+dataset: cluener
+encoding: byte
+raw_dir: /root/autodl-tmp/EdgeFS_NER/data/raw/cluener
+processed_dir: /root/autodl-tmp/EdgeFS_NER/data/processed/cluener_byte

@@ -1,0 +1,63 @@
+{
+  "rows": [
+    {
+      "kind": "full",
+      "f1_seeds": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "export": {
+        "checkpoint": "/root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_full_s42/best.pt",
+        "model_type": "char_cnn_crf",
+        "mcu_exportable": true,
+        "onnx_path": "/root/autodl-tmp/EdgeFS_NER/outputs/export/conll2003_full_s42/model_emissions.onnx",
+        "onnx_size_kb": 697.9,
+        "param_count": 178264,
+        "vocab_size": 60,
+        "embed_fp32_kb": 15.0,
+        "peak_activation_kb_est": 128.0,
+        "host_cpu_latency_ms": 1.21,
+        "test_f1_from_metrics": null
+      }
+    },
+    {
+      "kind": "distill",
+      "f1_seeds": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "export": {
+        "checkpoint": "/root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_distill_s42/best.pt",
+        "model_type": "char_cnn_crf",
+        "mcu_exportable": true,
+        "onnx_path": "/root/autodl-tmp/EdgeFS_NER/outputs/export/conll2003_distill_s42/model_emissions.onnx",
+        "onnx_size_kb": 697.9,
+        "param_count": 178264,
+        "vocab_size": 60,
+        "embed_fp32_kb": 15.0,
+        "peak_activation_kb_est": 128.0,
+        "host_cpu_latency_ms": 1.12,
+        "test_f1_from_metrics": null
+      }
+    },
+    {
+      "kind": "ablation_wordlevel",
+      "f1_seeds": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "export": {
+        "checkpoint": "/root/autodl-tmp/EdgeFS_NER/outputs/runs/conll2003_ablation_wordlevel_s42/best.pt",
+        "model_type": "bilstm_crf",
+        "mcu_exportable": false,
+        "reason": "Word-level / transformer checkpoints are outside the Char-CNN ONNX\u2192ESP-DL emission export path (OOM / unsupported ops on MCU).",
+        "param_count": 2338756,
+        "ckpt_size_kb": 9140.1,
+        "test_f1_from_metrics": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "platform": "raspberry_pi_3b_plus",
+  "hardware": {
+    "board": "Raspberry Pi 3 Model B Plus",
+    "soc": "BCM2837B0",
+    "cpu": "Quad-core Cortex-A53 1.4 GHz",
+    "ram_mb": 1024
+  },
+  "deploy_dir": "assets/deploy",
+  "warmup": 3,
+  "repeat": 10,
+  "latency_ms_mean": 43.559086366663756,
+  "latency_ms_per_sentence": [
+    46.73916409999492,
+    34.92225669999698,
+    49.01583829999936
+  ],
+  "peak_rss_mb": 58.81640625,
+  "model_size_kb": 697.9,
+  "results": [
+    {
+      "sentence_id": "en-01",
+      "text": "John works in Paris",
+      "latency_ms": 46.73916409999492,
+      "peak_rss_mb": 58.80078125,
+      "num_tokens": 4,
+      "tags": [
+        "I-PER",
+        "O",
+        "O",
+        "I-LOC"
+      ]
+    },
+    {
+      "sentence_id": "en-02",
+      "text": "Mary visited London yesterday",
+      "latency_ms": 34.92225669999698,
+      "peak_rss_mb": 58.80859375,
+      "num_tokens": 4,
+      "tags": [
+        "O",
+        "O",
+        "O",
+        "O"
+      ]
+    },
+    {
+      "sentence_id": "en-03",
+      "text": "Google opened an office in Berlin",
+      "latency_ms": 49.01583829999936,
+      "peak_rss_mb": 58.81640625,
+      "num_tokens": 6,
+      "tags": [
+        "I-PER",
+        "O",
+        "O",
+        "O",
+        "O",
+        "I-LOC"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+name: bert_crf_base_frozen
+model: bert_crf
+pretrained_name: bert-base-cased
+dropout: 0.1
+freeze_backbone: true

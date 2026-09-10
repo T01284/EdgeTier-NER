@@ -1,0 +1,4 @@
+name: bert_crf_chinese_tiny
+model: bert_crf
+pretrained_name: hfl/rbt3
+dropout: 0.1

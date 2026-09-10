@@ -1,0 +1,89 @@
+{
+  "source": "AutoDL /root/autodl-tmp/EdgeFS_NER/outputs/runs/*fulltestb*",
+  "test_set": "official eng.testb (3453 sentences)",
+  "runs": {
+    "conll2003_ablation_wordlevel_fulltestb_s42": {
+      "test_f1_percent": 73.6,
+      "metrics": "outputs/runs/conll2003_ablation_wordlevel_fulltestb_s42/metrics.json"
+    },
+    "conll2003_ablation_wordlevel_fulltestb_s43": {
+      "test_f1_percent": 73.78,
+      "metrics": "outputs/runs/conll2003_ablation_wordlevel_fulltestb_s43/metrics.json"
+    },
+    "conll2003_ablation_wordlevel_fulltestb_s44": {
+      "test_f1_percent": 72.93,
+      "metrics": "outputs/runs/conll2003_ablation_wordlevel_fulltestb_s44/metrics.json"
+    },
+    "conll2003_bilstm_fulltestb": {
+      "test_f1_percent": 78.1,
+      "metrics": "outputs/runs/conll2003_bilstm_fulltestb/metrics.json"
+    },
+    "conll2003_distill_bert_fulltestb": {
+      "test_f1_percent": 72.4,
+      "metrics": "outputs/runs/conll2003_distill_bert_fulltestb/metrics.json"
+    },
+    "conll2003_distill_fulltestb_s42": {
+      "test_f1_percent": 72.42,
+      "metrics": "outputs/runs/conll2003_distill_fulltestb_s42/metrics.json"
+    },
+    "conll2003_distill_fulltestb_s43": {
+      "test_f1_percent": 72.05,
+      "metrics": "outputs/runs/conll2003_distill_fulltestb_s43/metrics.json"
+    },
+    "conll2003_distill_fulltestb_s44": {
+      "test_f1_percent": 70.49,
+      "metrics": "outputs/runs/conll2003_distill_fulltestb_s44/metrics.json"
+    },
+    "conll2003_full_fulltestb_s42": {
+      "test_f1_percent": 72.65,
+      "metrics": "outputs/runs/conll2003_full_fulltestb_s42/metrics.json"
+    },
+    "conll2003_full_fulltestb_s43": {
+      "test_f1_percent": 70.5,
+      "metrics": "outputs/runs/conll2003_full_fulltestb_s43/metrics.json"
+    },
+    "conll2003_full_fulltestb_s44": {
+      "test_f1_percent": 71.07,
+      "metrics": "outputs/runs/conll2003_full_fulltestb_s44/metrics.json"
+    }
+  },
+  "aggregates": {
+    "ours_charcnn_3seed": {
+      "mean": 71.41,
+      "std": 0.91,
+      "n": 3,
+      "values": [
+        72.65,
+        70.5,
+        71.07
+      ]
+    },
+    "distill_charcnn_3seed": {
+      "mean": 71.65,
+      "std": 0.84,
+      "n": 3,
+      "values": [
+        72.42,
+        72.05,
+        70.49
+      ]
+    },
+    "wordlevel_bilstm_3seed": {
+      "mean": 73.44,
+      "std": 0.37,
+      "n": 3,
+      "values": [
+        73.6,
+        73.78,
+        72.93
+      ]
+    },
+    "bilstm": 78.1,
+    "distill_bert": 72.4
+  },
+  "paper_table1_conll": {
+    "Ours": 71.41,
+    "BiLSTM-CRF": 78.1,
+    "note": "Table 1 CoNLL column uses 3-seed mean for Ours; BiLSTM single fulltestb run"
+  }
+}

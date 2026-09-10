@@ -1,0 +1,9 @@
+# AutoDL / SeetaCloud 数据盘路径（50G）
+# 代码可留在系统盘 /root/EdgeFS_NER；大数据放数据盘避免系统盘满。
+# 当前训练结束后，可将 data/、outputs/ 迁移或软链到此目录。
+
+data_root: /root/autodl-tmp/EdgeFS_NER
+raw_dir: /root/autodl-tmp/EdgeFS_NER/data/raw
+processed_dir: /root/autodl-tmp/EdgeFS_NER/data/processed
+outputs_dir: /root/autodl-tmp/EdgeFS_NER/outputs
+checkpoints_dir: /root/autodl-tmp/EdgeFS_NER/outputs/runs

@@ -1,0 +1,6 @@
+-r base.txt
+onnx>=1.15
+onnxruntime>=1.16
+onnxscript>=0.1.0
+# esp-ppq: install on machine that runs MCU quantization (may need Linux)
+# pip install esp-ppq

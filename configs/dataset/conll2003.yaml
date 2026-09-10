@@ -1,0 +1,5 @@
+name: conll2003
+dataset: conll2003
+raw_dir: data/raw/conll2003
+processed_dir: data/processed/conll2003
+lowercase: true
